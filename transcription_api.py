@@ -19,8 +19,9 @@ app.add_middleware(
 )
 
 # تحميل المعالج والنموذج
-processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-large-960h")
-model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-large-960h")
+# تحميل المعالج والنموذج
+processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h")
+model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-base-960h")
 
 async def transcribe_audio(audio_data: bytes):
     try:
